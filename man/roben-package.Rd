@@ -3,8 +3,10 @@
 \docType{package}
 \name{roben-package}
 \alias{roben-package}
-\title{Robust Bayesian Variable Selection for Gene-Environment Interactions}
+\title{roben: Robust Bayesian Variable Selection for Gene-Environment Interactions}
 \description{
+Gene-environment (G×E) interactions have important implications to elucidate the etiology of complex diseases beyond the main genetic and environmental effects. Outliers and data contamination in disease phenotypes of G×E studies have been commonly encountered, leading to the development of a broad spectrum of robust penalization methods. Nevertheless, within the Bayesian framework, the issue has not been taken care of in existing studies. We develop a robust Bayesian variable selection method for G×E interaction studies. The proposed Bayesian method can effectively accommodate heavy-tailed errors and outliers in the response variable while conducting variable selection by accounting for structural sparsity. In particular, the spike-and-slab priors have been imposed on both individual and group levels to identify important main and interaction effects. An efficient Gibbs sampler has been developed to facilitate fast computation. The Markov chain Monte Carlo algorithms of the proposed and alternative methods are efficiently implemented in C++.
+
 In this package, we provide a set of robust Bayesian variable selection methods tailored for interaction analysis. A Bayesian formulation of the least absolute deviation (LAD) regression has been adopted to accommodate data contamination and long-tailed distributions in the response/ phenotype. The default method (the proposed method) conducts variable selection by accounting for structural sparsity. In particular, the spike--and--slab priors are imposed on both individual and group levels to identify important main and interaction effects (bi-level/ sparse-group selection).
 
 In addition to the default method, users can also choose different selection structures (group-level-only or individual-level-only), methods without spike--and--slab priors and non-robust methods. In total, \emph{roben} provides 12 different methods (6 robust and 6 non-robust). Among them, robust methods with spike--and--slab priors and the robust method for bi-level selection have been developed for the first time. Please read the Details below for how to configure the method used.
@@ -23,36 +25,44 @@ GxESelection() takes a roben object and returns the variable selection results.
 predict() takes a roben object and returns the predicted values for new observations.
 }
 \references{
-Ren, J., Zhou, F., Li, X., Ma, S., Jiang, Y. and Wu, C. (2020). Robust Bayesian variable selection for gene-environment interactions.
+Ren, J., Zhou, F., Li, X., Ma, S., Jiang, Y., and Wu, C. (2023). Robust Bayesian variable selection for gene-environment interactions.
+\emph{Biometrics}, 79(2):684-694. \doi{10.1111/biom.13670}. PMID: 35394058.
 
 Wu, C., and Ma, S. (2015). A selective review of robust variable selection with applications in bioinformatics.
-{\emph{Briefings in Bioinformatics}, 16(5), 873–883} \url{https://doi.org/10.1093/bib/bbu046}
+\emph{Briefings in Bioinformatics}, 16(5), 873–883. \doi{10.1093/bib/bbu046}.
 
-Zhou, F., Ren, J., Lu, X., Ma, S. and Wu, C. (2020). Gene–Environment Interaction: a Variable Selection Perspective. Epistasis. Methods in Molecular Biology.
-{\emph{Humana Press} (Accepted)} \url{https://arxiv.org/abs/2003.02930}
+Zhou, F., Ren, J., Lu, X., Ma, S., and Wu, C. (2021). Gene-Environment Interaction: A Variable Selection Perspective.
+\emph{Methods in Molecular Biology}, 2212:191-223. \doi{10.1007/978-1-0716-0947-7_13}. PMID: 33733358.
 
-Ren, J., Zhou, F., Li, X., Chen, Q., Zhang, H., Ma, S., Jiang, Y. and Wu, C. (2020) Semi-parametric Bayesian variable selection for gene-environment interactions.
-{\emph{Statistics in Medicine}, 39: 617– 638} \url{https://doi.org/10.1002/sim.8434}
+Ren, J., Zhou, F., Li, X., Chen, Q., Zhang, H., Ma, S., Jiang, Y., and Wu, C. (2020). Semi-parametric Bayesian variable selection for
+gene-environment interactions. \emph{Statistics in Medicine}, 39: 617–638. \doi{10.1002/sim.8434}.
 
-Ren, J., Zhou, F., Li, X., Wu, C. and Jiang, Y. (2019) spinBayes: Semi-Parametric Gene-Environment Interaction via Bayesian Variable Selection.
-R package version 0.1.0. \url{https://CRAN.R-project.org/package=spinBayes}
+Ren, J., Zhou, F., Li, X., Wu, C., and Jiang, Y. (2019). spinBayes: Semi-Parametric Gene-Environment Interaction via
+Bayesian Variable Selection. R package version 0.1.0. \url{https://CRAN.R-project.org/package=spinBayes}.
 
-Wu, C., Jiang, Y., Ren, J., Cui, Y. and Ma, S. (2018). Dissecting gene-environment interactions: A penalized robust approach accounting for hierarchical structures.
-{\emph{Statistics in Medicine}, 37:437–456} \url{https://doi.org/10.1002/sim.7518}
+Wu, C., Jiang, Y., Ren, J., Cui, Y., and Ma, S. (2018). Dissecting gene-environment interactions: A penalized robust approach
+accounting for hierarchical structures. \emph{Statistics in Medicine}, 37:437–456. \doi{10.1002/sim.7518}.
 
-Wu, C., Shi, X., Cui, Y. and Ma, S. (2015). A penalized robust semiparametric approach for gene-environment interactions.
-{\emph{Statistics in Medicine}, 34 (30): 4016–4030} \url{https://doi.org/10.1002/sim.6609}
+Wu, C., Shi, X., Cui, Y., and Ma, S. (2015). A penalized robust semiparametric approach for gene-environment interactions.
+\emph{Statistics in Medicine}, 34(30): 4016–4030. \doi{10.1002/sim.6609}.
 
-Wu, C., Cui, Y., and Ma, S. (2014). Integrative analysis of gene–environment interactions under a multi–response partially linear varying coefficient model.
-{\emph{Statistics in Medicine}, 33(28), 4988–4998} \url{https://doi.org/10.1002/sim.6287}
+Wu, C., Cui, Y., and Ma, S. (2014). Integrative analysis of gene–environment interactions under a multi–response partially linear
+varying coefficient model. \emph{Statistics in Medicine}, 33(28): 4988–4998. \doi{10.1002/sim.6287}.
 
-Wu, C., Zhong, P.S. and Cui, Y. (2018). Additive varying–coefficient model for nonlinear gene–environment interactions.
-{\emph{Statistical Applications in Genetics and Molecular Biology}, 17(2)} \url{https://doi.org/10.1515/sagmb-2017-0008}
+Wu, C., Zhong, P.S., and Cui, Y. (2018). Additive varying–coefficient model for nonlinear gene–environment interactions.
+\emph{Statistical Applications in Genetics and Molecular Biology}, 17(2). \doi{10.1515/sagmb-2017-0008}.
 
-Wu, C., Zhong, P.S. and Cui, Y. (2013). High dimensional variable selection for gene-environment interactions.
-{\emph{Technical Report. Michigan State University.}}
+Wu, C., Zhong, P.S., and Cui, Y. (2013). High dimensional variable selection for gene-environment interactions.
+\emph{Technical Report. Michigan State University.}
 }
 \seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jrhub/roben}
+  \item Report bugs at \url{https://github.com/jrhub/roben/issues}
+}
+
+
 \code{\link{roben}}
 }
 \keyword{overview}
