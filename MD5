@@ -1,5 +1,6 @@
-3d15c9e6a66db3d2144c9992dc851e60 *DESCRIPTION
+4f2ccf237c17fa384a8bafdb3ed99399 *DESCRIPTION
 0aabfbe1ecc1021b4abe69b7c6b8ebd2 *NAMESPACE
+3f2adb293da54b0ae9e02b8f39e1f940 *NEWS.md
 3765103632f41776a83b3c0a180d8e74 *R/DataMatrix.R
 64016b898357c64d50dab428dbec78c2 *R/GxESelection.R
 4831e05847537ccdd2c65b0c8aea9971 *R/NonRobust.R
@@ -11,8 +12,8 @@ fdb9f136650725f2d65c176f85195226 *R/data.R
 4cf6319916d02373978b2c30740d9365 *R/print.robin.R
 922939ebcff35e5eb5b1c79552caf311 *R/roben-package.R
 2cb1eb6b5a7349b08a09c1cf0d2e7c6c *R/roben.R
-c425bb7f696a287b927494ff3221832f *README.md
-24bc7c3f5a645905c53152bd3d0b8f61 *build/partial.rdb
+2747ea627dc6016c8c727d692fddb128 *README.md
+1dda19015f0aa969acee990c150e3ac9 *build/partial.rdb
 f62b3a43931aebbebe74cb677538502a *data/GxE_large.rda
 f63ea2a2aede42bad98eafaa0c242a23 *data/GxE_small.rda
 96daade315f0236e350b51dbaee6b907 *man/GxESelection.Rd
@@ -21,7 +22,7 @@ cf4fd34580fe6f80ae4ee6747cd6812b *man/data.Rd
 7f7bd215aafc6f406166f1d917479c1f *man/print.GxESelection.Rd
 92b981ea1934645e462f0b9e2b66c440 *man/print.roben.Rd
 ec4a044df40b201b0c58543ca3a0eaea *man/print.roben.pred.Rd
-9fb9896f42e430cd3c781bd51bd42aac *man/roben-package.Rd
+1972082c3747156afc968906c536cfed *man/roben-package.Rd
 e3d664d4d54988f059bfe5d4f3aebae1 *man/roben.Rd
 7e3eb7b1a8e5b41c821c3ef699389da7 *src/BGL-SS.cpp
 c549b1f1ed700322a0ebf9f1f63a6ea3 *src/BGL.cpp
